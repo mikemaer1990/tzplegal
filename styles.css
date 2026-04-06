@@ -1327,6 +1327,50 @@ textarea {
   font-style: italic;
 }
 
+/* Form success state */
+.form-success {
+  text-align: center;
+  padding: 3rem 2rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.form-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.form-success-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.form-success h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.form-success p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
 /* ============================================
    FOOTER
    ============================================ */

@@ -122,6 +122,17 @@ window.addEventListener('scroll', () => {
   progressBar.style.width = pct + '%';
 }, { passive: true });
 
+// ---- Contact form success state ----
+if (new URLSearchParams(window.location.search).get('success') === '1') {
+  const successEl = document.getElementById('formSuccess');
+  const formContent = document.getElementById('formContent');
+  if (successEl) successEl.style.display = 'block';
+  if (formContent) formContent.style.display = 'none';
+  successEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Clean up URL without reloading
+  history.replaceState(null, '', window.location.pathname);
+}
+
 // ---- Number counter animation ----
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);

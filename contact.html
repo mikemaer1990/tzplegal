@@ -134,8 +134,20 @@
 
         <!-- Right: Contact Form -->
         <div class="contact-form-wrap fade-up">
-          <h3>Send Your Request</h3>
-          <p>Fill out the form and we'll be in touch within 1 business day.</p>
+
+          <!-- Success message — shown when ?success=1 is in URL -->
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="form-success-icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Message Received</h3>
+            <p>Thank you for reaching out. We'll be in touch within 1 business day.</p>
+            <p style="font-size:0.85rem; color:var(--muted);">In the meantime, you're welcome to call us directly at <a href="tel:+16477252554" style="color:var(--gold);">+1 (647) 725-2554</a>.</p>
+          </div>
+
+          <div id="formContent">
+            <h3>Send Your Request</h3>
+            <p>Fill out the form and we'll be in touch within 1 business day.</p>
 
           <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="afa6b400-519c-4ef4-a2ac-209997fd6307">
@@ -185,6 +197,7 @@
             <button type="submit" class="btn btn-gold" style="width:100%; font-size:0.9rem;">Send My Request</button>
             <p class="form-note">We typically respond within 1 business day.</p>
           </form>
+          </div><!-- /formContent -->
         </div>
 
       </div>
