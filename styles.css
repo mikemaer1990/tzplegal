@@ -112,6 +112,19 @@ p {
   display: none;
 }
 
+.section-label--centered {
+  justify-content: center;
+}
+
+.section-label--centered::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
 .section-title {
   margin-bottom: 1rem;
 }
