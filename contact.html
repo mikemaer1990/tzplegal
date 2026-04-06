@@ -137,8 +137,11 @@
           <h3>Send Your Request</h3>
           <p>Fill out the form and we'll be in touch within 1 business day.</p>
 
-          <!-- TODO: Replace mailto action with a proper form handler before launch -->
-          <form action="mailto:info@tzplegal.com" method="POST" enctype="text/plain">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="afa6b400-519c-4ef4-a2ac-209997fd6307">
+            <input type="hidden" name="subject" value="New Consultation Request — The Zebras Paralegal LP">
+            <input type="hidden" name="redirect" value="https://mikemaer1990.github.io/tzplegal/contact.html?success=1">
+            <input type="checkbox" name="botcheck" style="display:none">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name <span style="color:var(--gold)">*</span></label>
