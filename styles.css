@@ -1792,5 +1792,25 @@ textarea {
 @media (max-width: 480px) {
   h1 { font-size: 2.4rem; }
   h2 { font-size: 1.9rem; }
-  .page-hero { padding: 7rem 0 3.5rem; }
+
+  /* Page hero — less vertical padding on small screens */
+  .page-hero { padding: 5.5rem 0 2.5rem; }
+
+  /* Why panel — prevent quote overflowing narrow viewport */
+  .why-panel-content { padding: 2rem 1.5rem; }
+  .why-panel-quote { max-width: 100%; }
+
+  /* About photo — 3/4 ratio is 500px tall at 375px wide; flatten it */
+  .photo-placeholder { aspect-ratio: 4/3; }
+
+  /* Testimonial quote mark — reduce so it doesn't overlap short quotes */
+  .testimonial-card::before { font-size: 3.5rem; top: 0.75rem; left: 1.25rem; }
+  .testimonial-card { padding-top: 3rem; }
+
+  /* Marquee — tighten gap on narrow screens */
+  .marquee-track { gap: 1.5rem; }
+
+  /* Sticky CTA — ensure 44px minimum tap target height */
+  .sticky-cta { padding: 0.6rem 1rem; }
+  .sticky-cta .btn { min-height: 44px; font-size: 0.78rem; }
 }
