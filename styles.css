@@ -1871,3 +1871,363 @@ textarea {
   .sticky-cta { padding: 0.6rem 1rem; }
   .sticky-cta .btn { min-height: 44px; font-size: 0.78rem; }
 }
+
+/* ============================================
+   Layout Overhaul - Phase 2
+   ============================================ */
+
+/* --- Homepage hero: photo background --- */
+.hero-home.hero-photo-bg {
+  background-image: url('images/13.webp');
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+}
+.hero-home.hero-photo-bg::before {
+  background-image: none;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.52) 0%, rgba(10,10,10,0.38) 45%, rgba(10,10,10,0.9) 100%);
+}
+
+/* --- Inner page photo heroes --- */
+.page-hero.page-hero-photo {
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page-hero.page-hero-photo::before {
+  background-image: none;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.8) 100%);
+}
+.page-hero.page-hero-photo .page-hero-content {
+  padding: 7rem 0 4rem;
+}
+.page-hero-about.page-hero-photo {
+  background-image: url('images/courtroom1.jpg');
+  background-position: center 35%;
+}
+.page-hero-services.page-hero-photo {
+  background-image: url('images/3.webp');
+}
+.page-hero-contact.page-hero-photo {
+  background-image: url('images/4.webp');
+  background-position: center 35%;
+}
+
+/* --- Homepage photo service cards --- */
+.photo-service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+  isolation: isolate;
+  border: 1px solid rgba(201,168,76,0.15);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+.photo-service-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+.photo-service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.56);
+  z-index: 1;
+  transition: background 0.35s ease;
+}
+.photo-service-card:hover::after { background: rgba(0,0,0,0.74); }
+.photo-service-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 28px rgba(201,168,76,0.2);
+  transform: translateY(-3px);
+}
+.photo-service-card:hover img { transform: scale(1.05); }
+.photo-service-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.75rem;
+}
+.photo-service-card-content h3 {
+  font-size: 1.15rem;
+  color: var(--gold);
+  margin-bottom: 0;
+  line-height: 1.3;
+  transition: margin-bottom 0.3s ease;
+}
+.photo-service-card-content p {
+  font-size: 0.85rem;
+  color: rgba(245,245,245,0.88);
+  line-height: 1.65;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: max-height 0.4s ease, opacity 0.35s ease, margin-top 0.3s ease;
+}
+.photo-service-card:hover .photo-service-card-content h3 { margin-bottom: 0.5rem; }
+.photo-service-card:hover .photo-service-card-content p {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 0.25rem;
+}
+
+/* --- Why Choose Us: photo panel --- */
+.why-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* --- Meet Our Team — homepage --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.team-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(201,168,76,0.12);
+}
+.team-card-photo {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.team-card-body { padding: 1.75rem 2rem 2rem; }
+.team-card-body h3 { font-size: 1.4rem; color: var(--white); margin-bottom: 0.2rem; }
+.team-card-title {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.85rem;
+}
+.team-card-body p { font-size: 0.92rem; color: var(--muted); margin-bottom: 1.25rem; line-height: 1.75; }
+.team-section-cta { text-align: center; }
+
+/* --- CTA banner: photo background --- */
+.cta-banner.cta-banner-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.cta-banner.cta-banner-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8,6,2,0.87);
+  pointer-events: none;
+  z-index: 0;
+}
+.cta-banner.cta-banner-photo .container { position: relative; z-index: 1; }
+
+/* --- About: team profile split layout --- */
+.team-profile-split {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.team-profile-split.reverse { grid-template-columns: 1.45fr 1fr; }
+.team-profile-split.reverse .team-profile-photo-wrap { order: 2; }
+.team-profile-split.reverse .team-profile-text { order: 1; }
+.team-profile-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+}
+.team-profile-photo-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.team-profile-text {
+  background: var(--bg-secondary);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.team-profile-text h2 { margin-bottom: 0.2rem; }
+.team-profile-text p { margin-bottom: 1rem; }
+
+/* --- About: photo value cards --- */
+.photo-value-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  isolation: isolate;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.photo-value-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.photo-value-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.photo-value-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.93) 30%, rgba(10,10,10,0.5) 100%);
+  z-index: 1;
+}
+.photo-value-card-content { position: relative; z-index: 2; padding: 2rem; }
+.photo-value-card-content h3 { color: var(--gold); font-size: 1.25rem; margin-bottom: 0.6rem; }
+.photo-value-card-content p { font-size: 0.9rem; color: rgba(245,245,245,0.8); margin: 0; }
+
+/* --- Services: photo card grid --- */
+.services-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.photo-service-card-full {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  min-height: 280px;
+  isolation: isolate;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+.photo-service-card-full.featured {
+  grid-column: 1 / -1;
+  min-height: 320px;
+}
+.photo-service-card-full img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+.photo-service-card-full::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,10,10,0.92) 25%, rgba(10,10,10,0.52) 100%);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+.photo-service-card-full:hover::after {
+  background: linear-gradient(to top, rgba(10,10,10,0.96) 25%, rgba(10,10,10,0.62) 100%);
+}
+.photo-service-card-full:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 32px rgba(201,168,76,0.15);
+  transform: translateY(-3px);
+}
+.photo-service-card-full:hover img { transform: scale(1.04); }
+.photo-service-card-full-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem 2.25rem;
+}
+.photo-service-card-full-content h3 { font-size: 1.3rem; color: var(--gold); margin-bottom: 0.65rem; }
+.photo-service-card-full-content p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(245,245,245,0.85);
+  margin-bottom: 1.25rem;
+}
+
+/* --- Contact section: photo background --- */
+.contact-photo-section {
+  position: relative;
+  background-image: url('images/8.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact-photo-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,8,0.91);
+  pointer-events: none;
+  z-index: 0;
+}
+.contact-photo-section > .container { position: relative; z-index: 1; }
+
+/* --- Phase 2 responsive --- */
+@media (max-width: 768px) {
+  .photo-service-card { aspect-ratio: 16/9; }
+  .team-grid { grid-template-columns: 1fr; }
+  .team-profile-split,
+  .team-profile-split.reverse {
+    display: flex;
+    flex-direction: column;
+  }
+  .team-profile-split .team-profile-photo-wrap,
+  .team-profile-split.reverse .team-profile-photo-wrap {
+    order: 0;
+    min-height: 280px;
+    position: relative;
+  }
+  .team-profile-split .team-profile-text,
+  .team-profile-split.reverse .team-profile-text {
+    order: 1;
+    padding: 2.25rem 1.75rem;
+  }
+  .services-photo-grid { grid-template-columns: 1fr; }
+  .photo-service-card-full.featured { grid-column: auto; }
+  .page-hero.page-hero-photo { min-height: 45vh; }
+  .page-hero.page-hero-photo .page-hero-content { padding: 5.5rem 0 3rem; }
+}
