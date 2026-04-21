@@ -108,32 +108,6 @@
   </div>
 
   <!-- ============================================================
-       TRUST BAR
-  ============================================================ -->
-  <div class="trust-bar">
-    <div class="container">
-      <div class="trust-bar-inner">
-        <div class="trust-item">
-          <span class="trust-item-label">Licensed &amp; Regulated</span>
-          <span class="trust-item-desc">Law Society of Ontario</span>
-        </div>
-        <div class="trust-item">
-          <span class="trust-item-label">Serving Ontario</span>
-          <span class="trust-item-desc">Toronto &amp; London</span>
-        </div>
-        <div class="trust-item">
-          <span class="trust-item-label">Free Consultations</span>
-          <span class="trust-item-desc">No obligation</span>
-        </div>
-        <div class="trust-item">
-          <span class="trust-item-label">Affordable Rates</span>
-          <span class="trust-item-desc">Paralegal pricing</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================================
        STATS
   ============================================================ -->
   <section class="stats-section zebra-bg">
@@ -141,7 +115,7 @@
       <div class="stats-grid">
         <!-- TODO: Replace with real numbers -->
         <div class="stat-item fade-up">
-          <span class="stat-number" data-target="500" data-suffix="+">0</span>
+          <span class="stat-number" data-target="100" data-suffix="+">0</span>
           <span class="stat-label">Clients Served</span>
         </div>
         <div class="stat-item fade-up">
@@ -175,7 +149,9 @@
       <div class="services-grid">
 
         <div class="photo-service-card fade-up">
-          <img src="images/8.webp" alt="Personal Injury" />
+          <div class="photo-service-card-img">
+            <img src="images/personal-injury.webp" alt="Personal Injury" />
+          </div>
           <div class="photo-service-card-content">
             <h3>Personal Injury</h3>
             <p>Representation for slip &amp; fall, motor vehicle accidents, and accident benefits before FSRA and LAT.</p>
@@ -183,7 +159,9 @@
         </div>
 
         <div class="photo-service-card fade-up">
-          <img src="images/7.webp" alt="Traffic Tickets" />
+          <div class="photo-service-card-img">
+            <img src="images/pulled-over.webp" alt="Traffic Tickets" />
+          </div>
           <div class="photo-service-card-content">
             <h3>Traffic Tickets</h3>
             <p>Fight tickets to protect your driving record, reduce demerit points, and prevent insurance rate increases.</p>
@@ -191,7 +169,9 @@
         </div>
 
         <div class="photo-service-card fade-up">
-          <img src="images/15.webp" alt="Small Claims Court" />
+          <div class="photo-service-card-img">
+            <img src="images/small-claims.webp" alt="Small Claims Court" />
+          </div>
           <div class="photo-service-card-content">
             <h3>Small Claims Court</h3>
             <p>Disputes up to $35,000 — unpaid debts, property damage, and contract disagreements handled professionally.</p>
@@ -199,7 +179,9 @@
         </div>
 
         <div class="photo-service-card fade-up">
-          <img src="images/5.webp" alt="Landlord and Tenant Board" />
+          <div class="photo-service-card-img">
+            <img src="images/lease-agreement.webp" alt="Landlord and Tenant Board" />
+          </div>
           <div class="photo-service-card-content">
             <h3>Landlord &amp; Tenant</h3>
             <p>LTB representation for landlords and tenants — evictions, rent arrears, and maintenance disputes.</p>
@@ -207,7 +189,9 @@
         </div>
 
         <div class="photo-service-card fade-up">
-          <img src="images/1.webp" alt="Criminal Summary Offences" />
+          <div class="photo-service-card-img">
+            <img src="images/law-library.webp" alt="Criminal Summary Offences" />
+          </div>
           <div class="photo-service-card-content">
             <h3>Criminal Summary Offences</h3>
             <p>Skilled representation for summary conviction offences within a paralegal's scope under the LSO.</p>
@@ -215,7 +199,9 @@
         </div>
 
         <div class="photo-service-card fade-up">
-          <img src="images/11.webp" alt="Notary and Commissioner" />
+          <div class="photo-service-card-img">
+            <img src="images/document-stamp.webp" alt="Notary and Commissioner" />
+          </div>
           <div class="photo-service-card-content">
             <h3>Notary &amp; Commissioner</h3>
             <p>Document certification, oaths, and witnessed signatures. Fast, affordable, and professionally handled.</p>
@@ -269,7 +255,7 @@
           <a href="contact.html" class="btn btn-gold">Book a Free Consultation</a>
         </div>
         <div class="why-visual fade-up">
-          <img src="images/16.webp" alt="Professional legal consultation" class="why-photo-img" />
+          <img src="images/lawyer-at-desk.webp" alt="Professional legal consultation" class="why-photo-img" />
         </div>
       </div>
     </div>
@@ -350,7 +336,7 @@
   <!-- ============================================================
        CTA BANNER
   ============================================================ -->
-  <section class="cta-banner cta-banner-photo" style="background-image: url('images/courtroom.jpg');">
+  <section class="cta-banner cta-banner-photo" style="background-image: url('images/courtroom.webp');">
     <div class="container">
       <div class="fade-up">
         <span class="section-label section-label--centered">Take Action Today</span>
@@ -418,10 +404,10 @@
 
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta">
-    <div class="sticky-cta-btns">
-      <a href="tel:+16477252554" class="btn btn-outline-gold">Call Now</a>
-      <a href="contact.html" class="btn btn-gold">Book Online</a>
-    </div>
+    <a href="tel:+16477252554" class="sticky-cta-call" aria-label="Call us">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.82 6.18a2 2 0 0 1 1.95-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L10.91 11a16 16 0 0 0 6.1 6.1l.65-.65a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <a href="contact.html" class="btn btn-gold sticky-cta-book">Book a Free Consultation</a>
   </div>
 
   <script src="script.js"></script>

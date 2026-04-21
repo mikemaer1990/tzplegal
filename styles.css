@@ -575,46 +575,6 @@ p {
   max-width: 560px;
 }
 
-/* ============================================
-   TRUST BAR
-   ============================================ */
-.trust-bar {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-secondary);
-  padding: 2rem 0;
-}
-
-.trust-bar-inner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  text-align: center;
-}
-
-.trust-item {
-  padding: 0.5rem 1rem;
-}
-
-.trust-item + .trust-item {
-  border-left: 1px solid var(--border);
-}
-
-.trust-item-label {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--gold);
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-.trust-item-desc {
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 
 /* ============================================
    SERVICES PREVIEW
@@ -1574,7 +1534,7 @@ textarea {
    STATS SECTION
    ============================================ */
 .stats-section {
-  padding: 5rem 0;
+  padding: 3rem 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--bg-secondary);
@@ -1588,7 +1548,7 @@ textarea {
 }
 
 .stat-item {
-  padding: 1.5rem 1rem;
+  padding: 0.75rem 1rem;
   position: relative;
 }
 
@@ -1605,7 +1565,7 @@ textarea {
 .stat-number {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--gold);
   line-height: 1;
@@ -1718,21 +1678,42 @@ textarea {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border);
   padding: 0.75rem 1rem;
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
   flex-direction: row;
   align-items: center;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
-}
-
-.sticky-cta-btns {
-  display: flex;
   gap: 0.75rem;
-  width: 100%;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.6);
 }
 
-.sticky-cta .btn {
+.sticky-cta-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--gold);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.sticky-cta-call:hover { background: rgba(201,168,76,0.08); border-color: var(--gold); }
+
+.sticky-cta-call svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sticky-cta-book {
   flex: 1;
-  padding: 0.72rem 0.5rem;
-  font-size: 0.75rem;
+  min-height: 48px;
+  font-size: 0.88rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -1742,7 +1723,7 @@ textarea {
 
   /* Push footer up so it's not hidden behind sticky bar */
   body {
-    padding-bottom: 58px;
+    padding-bottom: 72px;
   }
 }
 
@@ -1784,24 +1765,9 @@ textarea {
   .nav-logo-text { display: none; }
 
   /* Hero */
-  .hero-logo { height: 56px; }
+  .hero-logo { display: none; }
   .hero-btns { flex-direction: column; }
   .hero-btns .btn { width: 100%; text-align: center; }
-
-  /* Trust bar */
-  .trust-bar-inner {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-  }
-  .trust-item + .trust-item {
-    border-left: none;
-  }
-  .trust-item:nth-child(odd) {
-    border-right: 1px solid var(--border);
-  }
-  .trust-item:nth-child(n+3) {
-    border-top: 1px solid var(--border);
-  }
 
   /* Stats */
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1868,8 +1834,8 @@ textarea {
   .marquee-track { gap: 1.5rem; }
 
   /* Sticky CTA — ensure 44px minimum tap target height */
-  .sticky-cta { padding: 0.6rem 1rem; }
-  .sticky-cta .btn { min-height: 44px; font-size: 0.78rem; }
+  .sticky-cta { padding: 0.6rem 0.75rem; padding-bottom: calc(0.6rem + env(safe-area-inset-bottom)); }
+  .sticky-cta .btn { min-height: 44px; font-size: 0.76rem; }
 }
 
 /* ============================================
@@ -1885,7 +1851,7 @@ textarea {
 }
 .hero-home.hero-photo-bg::before {
   background-image: none;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.52) 0%, rgba(10,10,10,0.38) 45%, rgba(10,10,10,0.9) 100%);
+  background: linear-gradient(to bottom, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.45) 25%, rgba(10,10,10,0.38) 55%, rgba(10,10,10,0.9) 100%);
 }
 
 /* --- Inner page photo heroes --- */
@@ -1900,54 +1866,47 @@ textarea {
 }
 .page-hero.page-hero-photo::before {
   background-image: none;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.8) 100%);
+  background: linear-gradient(to bottom, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0.45) 20%, rgba(10,10,10,0.8) 100%);
 }
 .page-hero.page-hero-photo .page-hero-content {
   padding: 7rem 0 4rem;
 }
 .page-hero-about.page-hero-photo {
-  background-image: url('images/courtroom1.jpg');
+  background-image: url('images/courtroom1.webp');
   background-position: center 35%;
 }
 .page-hero-services.page-hero-photo {
-  background-image: url('images/3.webp');
+  background-image: url('images/law-books.webp');
+  background-position: center 60%;
 }
 .page-hero-contact.page-hero-photo {
-  background-image: url('images/4.webp');
+  background-image: url('images/law-office-dark.webp');
   background-position: center 35%;
 }
 
 /* --- Homepage photo service cards --- */
 .photo-service-card {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   border-radius: 4px;
-  aspect-ratio: 4/3;
-  isolation: isolate;
+  overflow: hidden;
   border: 1px solid rgba(201,168,76,0.15);
+  background: var(--bg-secondary);
   transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   cursor: default;
 }
+.photo-service-card-img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
 .photo-service-card img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
   transition: transform 0.6s ease;
-  z-index: 0;
 }
-.photo-service-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.56);
-  z-index: 1;
-  transition: background 0.35s ease;
-}
-.photo-service-card:hover::after { background: rgba(0,0,0,0.74); }
 .photo-service-card:hover {
   border-color: var(--gold);
   box-shadow: 0 0 28px rgba(201,168,76,0.2);
@@ -1955,37 +1914,19 @@ textarea {
 }
 .photo-service-card:hover img { transform: scale(1.05); }
 .photo-service-card-content {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 2rem 1.75rem;
+  padding: 1.5rem 1.75rem 2rem;
+  flex: 1;
 }
 .photo-service-card-content h3 {
-  font-size: 1.15rem;
-  color: var(--gold);
-  margin-bottom: 0;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
   line-height: 1.3;
-  transition: margin-bottom 0.3s ease;
 }
 .photo-service-card-content p {
-  font-size: 0.85rem;
-  color: rgba(245,245,245,0.88);
+  font-size: 0.88rem;
+  color: var(--muted);
   line-height: 1.65;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  transition: max-height 0.4s ease, opacity 0.35s ease, margin-top 0.3s ease;
-}
-.photo-service-card:hover .photo-service-card-content h3 { margin-bottom: 0.5rem; }
-.photo-service-card:hover .photo-service-card-content p {
-  max-height: 120px;
-  opacity: 1;
-  margin-top: 0.25rem;
 }
 
 /* --- Why Choose Us: photo panel --- */
@@ -2018,7 +1959,7 @@ textarea {
 }
 .team-card-photo {
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -2054,41 +1995,34 @@ textarea {
 }
 .cta-banner.cta-banner-photo .container { position: relative; z-index: 1; }
 
-/* --- About: team profile split layout --- */
+/* --- About: team profile avatar card --- */
 .team-profile-split {
-  display: grid;
-  grid-template-columns: 1fr 1.45fr;
   border: 1px solid var(--border);
   border-radius: 4px;
-  overflow: hidden;
+  background: var(--bg-secondary);
+  padding: 3.5rem 3rem 4rem;
   margin-bottom: 4rem;
 }
-.team-profile-split.reverse { grid-template-columns: 1.45fr 1fr; }
-.team-profile-split.reverse .team-profile-photo-wrap { order: 2; }
-.team-profile-split.reverse .team-profile-text { order: 1; }
 .team-profile-photo-wrap {
-  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
   overflow: hidden;
-  min-height: 420px;
+  border: 2px solid var(--border);
+  margin: 0 auto 2rem;
 }
 .team-profile-photo-wrap img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
+  transform: scale(2);
+  transform-origin: center 30%;
   display: block;
-}
-.team-profile-text {
-  background: var(--bg-secondary);
-  padding: 3.5rem 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .team-profile-text h2 { margin-bottom: 0.2rem; }
 .team-profile-text p { margin-bottom: 1rem; }
+.team-profile-split:not(.reverse) .team-profile-photo-wrap img { transform: scale(1.8); transform-origin: center 48%; }
 
 /* --- About: photo value cards --- */
 .photo-value-card {
@@ -2190,42 +2124,16 @@ textarea {
 
 /* --- Contact section: photo background --- */
 .contact-photo-section {
-  position: relative;
-  background-image: url('images/8.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
 }
-.contact-photo-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(8,8,8,0.91);
-  pointer-events: none;
-  z-index: 0;
-}
-.contact-photo-section > .container { position: relative; z-index: 1; }
 
 /* --- Phase 2 responsive --- */
 @media (max-width: 768px) {
-  .photo-service-card { aspect-ratio: 16/9; }
+  .photo-service-card-img { aspect-ratio: 16/9; }
   .team-grid { grid-template-columns: 1fr; }
-  .team-profile-split,
-  .team-profile-split.reverse {
-    display: flex;
-    flex-direction: column;
-  }
-  .team-profile-split .team-profile-photo-wrap,
-  .team-profile-split.reverse .team-profile-photo-wrap {
-    order: 0;
-    min-height: 280px;
-    position: relative;
-  }
-  .team-profile-split .team-profile-text,
-  .team-profile-split.reverse .team-profile-text {
-    order: 1;
-    padding: 2.25rem 1.75rem;
-  }
+  .team-profile-split { padding: 2.5rem 1.75rem 3rem; }
+  .team-profile-photo-wrap { width: 180px; height: 180px; }
   .services-photo-grid { grid-template-columns: 1fr; }
   .photo-service-card-full.featured { grid-column: auto; }
   .page-hero.page-hero-photo { min-height: 45vh; }
