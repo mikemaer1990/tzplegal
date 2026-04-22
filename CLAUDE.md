@@ -1,4 +1,4 @@
-# The Zebras Paralegal LP — Website
+# The Zebras Paralegal LLP — Website
 
 ## Project Status: LIVE
 
@@ -41,7 +41,7 @@
 - Handler: **Web3Forms** (https://api.web3forms.com/submit)
 - Access key: `afa6b400-519c-4ef4-a2ac-209997fd6307`
 - Delivers to: `info@tzplegal.com`
-- Subject line: "New Consultation Request — The Zebras Paralegal LP"
+- Subject line: "New Consultation Request — The Zebras Paralegal LLP"
 - Redirect after submit: `https://mikemaer1990.github.io/tzplegal/contact.html?success=1`
 - Bot protection: honeypot `botcheck` checkbox (hidden)
 
@@ -75,12 +75,12 @@
 
 ## Pending — Awaiting From Client
 
-- [ ] **Paralegal photo** — `about.html` story section (placeholder: "Photo Coming Soon")
-- [ ] **Real bio** — `about.html` (placeholder bio currently in place)
+- [x] **Paralegal photo** — `images/johnson-luyiga.webp` in place
+- [x] **Real bio** — `about.html` bio written and in place
 - [ ] **Client testimonials** — `index.html` (3 lorem ipsum placeholders)
 - [ ] **LSO licence number** — `about.html` credentials panel
-- [ ] **Office hours** — `contact.html` contact info column
-- [ ] **Confirm stat numbers** — `index.html` stats section (currently: 500+ clients, 10+ years)
+- [x] **Office hours** — `contact.html` contact info column (Mon–Fri 9–5, Sat 10–3)
+- [x] **Stat numbers confirmed** — 100+ clients, 3+ years experience, 2 Ontario locations
 - [ ] **Form success message** — `contact.html` currently redirects back to same page with `?success=1` but no banner is shown yet
 
 ---
