@@ -586,74 +586,6 @@ p {
   margin-bottom: 3rem;
 }
 
-.service-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2.5rem 2rem;
-  transition: all 0.3s ease;
-  cursor: default;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.service-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0%;
-  background: linear-gradient(to top, rgba(201, 168, 76, 0.08) 0%, transparent 100%);
-  transition: height 0.4s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.service-card:hover::after {
-  height: 65%;
-}
-
-.service-card > * {
-  position: relative;
-  z-index: 1;
-}
-
-.service-card:hover {
-  border-color: var(--gold);
-  box-shadow: 0 0 32px rgba(201, 168, 76, 0.14);
-  transform: translateY(-3px);
-}
-
-.service-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 1.5rem;
-  color: var(--gold);
-}
-
-.service-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke: var(--gold);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.service-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-  color: var(--white);
-}
-
-.service-card p {
-  font-size: 0.9rem;
-  margin-bottom: 1.2rem;
-  color: var(--muted);
-}
 
 .service-link {
   font-size: 0.82rem;
@@ -674,92 +606,6 @@ p {
   text-align: center;
 }
 
-/* Full services grid (services.html) */
-.services-full-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-
-.service-card-full {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2.5rem 2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.service-card-full::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0%;
-  background: linear-gradient(to top, rgba(201, 168, 76, 0.07) 0%, transparent 100%);
-  transition: height 0.4s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.service-card-full:hover::after {
-  height: 65%;
-}
-
-.service-card-full > * {
-  position: relative;
-  z-index: 1;
-}
-
-.service-card-full:hover {
-  border-color: var(--gold);
-  box-shadow: 0 0 28px rgba(201, 168, 76, 0.12);
-  transform: translateY(-3px);
-}
-
-.service-card-full h3 {
-  font-size: 1.3rem;
-  color: var(--gold);
-  margin-bottom: 0.75rem;
-  margin-top: 1rem;
-}
-
-.service-card-full p {
-  font-size: 0.92rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-.service-card-full .service-link {
-  font-size: 0.82rem;
-}
-
-.service-card-featured {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 0 2.5rem;
-  padding: 3rem 2.5rem;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(17,17,17,0.9) 100%);
-  border-color: rgba(201, 168, 76, 0.3);
-}
-
-.service-card-featured .service-icon {
-  grid-row: 1 / 3;
-  width: 56px;
-  height: 56px;
-  margin-bottom: 0;
-  margin-top: 0.25rem;
-}
-
-.service-card-featured h3 {
-  font-size: 1.55rem;
-  align-self: end;
-}
 
 /* ============================================
    WHY CHOOSE US
@@ -983,44 +829,6 @@ p {
 /* ============================================
    ABOUT PAGE
    ============================================ */
-.story-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 5rem;
-  align-items: start;
-}
-
-.photo-placeholder {
-  aspect-ratio: 3/4;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-  color: var(--muted);
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.photo-placeholder svg {
-  width: 48px;
-  height: 48px;
-  stroke: var(--border);
-  fill: none;
-  stroke-width: 1;
-}
-
-.story-text h2 {
-  margin-bottom: 1rem;
-}
-
-.story-text p {
-  margin-bottom: 1.2rem;
-}
 
 .credentials-panel {
   background: var(--bg-secondary);
@@ -1064,68 +872,6 @@ p {
   gap: 1.5rem;
 }
 
-.value-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2.5rem 2rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.value-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0%;
-  background: linear-gradient(to top, rgba(201, 168, 76, 0.07) 0%, transparent 100%);
-  transition: height 0.4s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.value-card:hover::after {
-  height: 65%;
-}
-
-.value-card > * {
-  position: relative;
-  z-index: 1;
-}
-
-.value-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-3px);
-}
-
-.value-icon {
-  width: 44px;
-  height: 44px;
-  margin-bottom: 1.5rem;
-}
-
-.value-icon svg {
-  width: 100%;
-  height: 100%;
-  stroke: var(--gold);
-  fill: none;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.value-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-}
-
-.value-card p {
-  font-size: 0.9rem;
-}
 
 /* ============================================
    CONTACT PAGE
@@ -1780,14 +1526,6 @@ textarea {
 
   /* Services */
   .services-grid { grid-template-columns: 1fr; }
-  .services-full-grid { grid-template-columns: 1fr; }
-  .service-card-featured {
-    grid-template-columns: 1fr;
-  }
-  .service-card-featured .service-icon {
-    grid-row: auto;
-    margin-bottom: 1rem;
-  }
 
   /* Why */
   .why-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -1797,7 +1535,6 @@ textarea {
   .testimonials-grid { grid-template-columns: 1fr; }
 
   /* About */
-  .story-grid { grid-template-columns: 1fr; gap: 3rem; }
   .credentials-list { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
 

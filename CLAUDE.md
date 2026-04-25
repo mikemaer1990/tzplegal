@@ -78,7 +78,7 @@
 - [x] **Paralegal photo** — `images/johnson-luyiga.webp` in place
 - [x] **Real bio** — `about.html` bio written and in place
 - [ ] **Client testimonials** — `index.html` (3 lorem ipsum placeholders)
-- [ ] **LSO licence number** — `about.html` credentials panel
+- [x] **LSO licence number** — `about.html` credentials panel (P19861)
 - [x] **Office hours** — `contact.html` contact info column (Mon–Fri 9–5, Sat 10–3)
 - [x] **Stat numbers confirmed** — 100+ clients, 3+ years experience, 2 Ontario locations
 - [ ] **Form success message** — `contact.html` currently redirects back to same page with `?success=1` but no banner is shown yet

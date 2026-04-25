@@ -82,12 +82,14 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     // Close all
     document.querySelectorAll('.faq-question').forEach(b => {
       b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
       b.nextElementSibling.classList.remove('open');
     });
 
     // Open clicked if it was closed
     if (!isOpen) {
       btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
       answer.classList.add('open');
     }
   });
