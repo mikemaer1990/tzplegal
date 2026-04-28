@@ -77,11 +77,14 @@
 
 - [x] **Paralegal photo** — `images/johnson-luyiga.webp` in place
 - [x] **Real bio** — `about.html` bio written and in place
-- [ ] **Client testimonials** — `index.html` (3 lorem ipsum placeholders)
+- [ ] **Client testimonials** — `index.html` (3 lorem ipsum placeholders) — Johnson sending tomorrow
 - [x] **LSO licence number** — `about.html` credentials panel (P19861)
 - [x] **Office hours** — `contact.html` contact info column (Mon–Fri 9–5, Sat 10–3)
 - [x] **Stat numbers confirmed** — 100+ clients, 3+ years experience, 2 Ontario locations
-- [ ] **Form success message** — `contact.html` currently redirects back to same page with `?success=1` but no banner is shown yet
+- [x] **Form success message** — implemented (`?success=1` triggers banner via `script.js:127`)
+- [x] **Social media links** — Instagram + Facebook icons in footer on all 4 pages
+- [ ] **Privacy policy page** — `privacy-policy.html` (footer link live, page not yet built — awaiting content from client)
+- [ ] **Terms & conditions page** — `terms-and-conditions.html` (footer link live, page not yet built — awaiting content from client)
 
 ---
 
