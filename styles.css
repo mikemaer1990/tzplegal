@@ -775,6 +775,8 @@ p {
   border-radius: 4px;
   padding: 2.5rem 2rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card::before {
@@ -796,6 +798,7 @@ p {
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   line-height: 1.8;
+  flex: 1;
 }
 
 .testimonial-author {
