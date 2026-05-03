@@ -19,7 +19,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
+        <a href="/" class="nav-logo">
           <img src="images/z_new_2.svg" alt="The Zebras Paralegal LLP logo" />
           <div class="nav-logo-text">
             <span class="nav-logo-name">The Zebras Paralegal LLP</span>
@@ -27,11 +27,11 @@
           </div>
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-cta"><a href="contact.html" class="btn btn-gold">Book a Free Consultation</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li class="nav-cta"><a href="/contact" class="btn btn-gold">Book a Free Consultation</a></li>
         </ul>
         <button class="hamburger" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -42,11 +42,11 @@
 
   <!-- Mobile Nav -->
   <div class="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn-gold">Book a Free Consultation</a>
+    <a href="/">Home</a>
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="btn btn-gold">Book a Free Consultation</a>
   </div>
 
   <!-- ============================================================
@@ -154,7 +154,7 @@
           <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="afa6b400-519c-4ef4-a2ac-209997fd6307">
             <input type="hidden" name="subject" value="New Consultation Request — The Zebras Paralegal LLP">
-            <input type="hidden" name="redirect" value="https://mikemaer1990.github.io/tzplegal/contact.html?success=1">
+            <input type="hidden" name="redirect" value="https://tzplegal.com/contact?success=1">
             <input type="checkbox" name="botcheck" style="display:none">
             <div class="form-row">
               <div class="form-group">
@@ -196,6 +196,7 @@
               <textarea id="message" name="message" placeholder="Briefly describe your situation…"></textarea>
             </div>
 
+            <div class="h-captcha" data-captcha="true" style="margin-bottom: 1rem;"></div>
             <button type="submit" class="btn btn-gold" style="width:100%; font-size:0.9rem;">Send My Request</button>
             <p class="form-note">We typically respond within 1 business day.</p>
           </form>
@@ -233,11 +234,11 @@
         <div>
           <div class="footer-col-title">Quick Links</div>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact.html">Book a Free Consultation</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/contact">Book a Free Consultation</a></li>
           </ul>
         </div>
         <div>
@@ -259,13 +260,13 @@
         </div>
       </div>
       <div class="footer-disclaimer">
-        The information on this website is not legal advice. Please <a href="contact.html">contact us</a> to see if we can assist you in any way possible.
+        The information on this website is not legal advice. Please <a href="/contact">contact us</a> to see if we can assist you in any way possible.
       </div>
       <div class="footer-bottom">
         <span class="footer-copyright">&copy; 2026 The Zebras Paralegal LLP. All rights reserved.</span>
         <div class="footer-legal">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>
@@ -276,9 +277,10 @@
     <a href="tel:+16477252554" class="sticky-cta-call" aria-label="Call us">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 4.82 6.18a2 2 0 0 1 1.95-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L10.91 11a16 16 0 0 0 6.1 6.1l.65-.65a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     </a>
-    <a href="contact.html" class="btn btn-gold sticky-cta-book">Book a Free Consultation</a>
+    <a href="/contact" class="btn btn-gold sticky-cta-book">Book a Free Consultation</a>
   </div>
 
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <script src="script.js"></script>
 </body>
 </html>
