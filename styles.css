@@ -1837,7 +1837,12 @@ textarea {
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 2rem 1.5rem; overflow: hidden; }
-  .h-captcha { transform: scale(0.9); transform-origin: left top; }
+  .h-captcha {
+    transform: scale(0.85);
+    transform-origin: left top;
+    margin-right: -45px;
+    margin-bottom: -11px;
+  }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -2161,6 +2166,7 @@ textarea {
 .contact-photo-section {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border);
+  overflow-x: hidden;
 }
 
 /* --- Phase 2 responsive --- */
